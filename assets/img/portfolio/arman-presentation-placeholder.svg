@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1296" height="700" viewBox="0 0 1296 700">
+  <rect width="1296" height="700" fill="#f6f5f3"/>
+  <rect x="32" y="32" width="1232" height="636" rx="4" fill="none" stroke="#b7b7b7" stroke-width="2" stroke-dasharray="12 10"/>
+  <g fill="#202020" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="648" y="315" font-size="36" font-weight="700">ARMAN MOBITECH</text>
+    <text x="648" y="366" font-size="24">Project presentation image</text>
+    <text x="648" y="409" font-size="20" fill="#666">1296 × 700 px</text>
+  </g>
+</svg>
