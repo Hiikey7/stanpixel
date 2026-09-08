@@ -678,6 +678,9 @@
                     speed: 350,
                     adaptiveHeight: true
                 });
+                if (isHomePricing) {
+                    carousel.slick('slickGoTo', 1, true);
+                }
                 if (carousel.closest('.home-page').length && !carousel.next('.pricing-swipe-hint').length) {
                     carousel.after('<p class="pricing-swipe-hint" aria-hidden="true"><i class="fas fa-arrow-left"></i><span>Swipe to compare packages</span><i class="fas fa-arrow-right"></i></p>');
                 }
