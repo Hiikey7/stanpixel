@@ -16085,7 +16085,7 @@ body.product-options-modal-open {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .header-logo .site-logo {
+  .header-layout1 .header-logo .site-logo {
     width: 150px;
   }
   .nav-header .main-menu > ul {
@@ -16104,6 +16104,31 @@ body.product-options-modal-open {
     padding-left: 16px;
     padding-right: 16px;
     font-size: 11px;
+  }
+}
+@media (min-width: 992px) {
+  .header-layout1 .menu-area .row {
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .header-layout1 .sticky-wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .header-layout1 .header-logo .site-logo {
+    width: 160px;
+  }
+  .nav-header .main-menu > ul {
+    margin: 0 -13px !important;
+  }
+  .nav-header .main-menu > ul > li > a {
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: 12px;
+  }
+  .header-button {
+    margin-left: 28px;
   }
 }
 /* Shared brand logo sizing for desktop, mobile, and footer placements. */
