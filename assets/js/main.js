@@ -92,7 +92,26 @@
         });
     };
 
+    var standardizeMobileMenu = function () {
+        var mobileMenuMarkup =
+            '<button type="button" class="menu-toggle" aria-label="Close menu"><i class="fas fa-times"></i></button>' +
+            '<div class="mobile-logo"><a href="home-4.html"><img class="site-logo" src="assets/img/icon/white.png" alt="Stanpixels" width="180" height="31"></a></div>' +
+            '<nav class="mobile-menu" aria-label="Mobile navigation"><ul>' +
+            '<li class="menu-item-has-children"><a href="service-2.html">OUR SERVICES</a><ul class="sub-menu"><li><a href="service-details.html?service=branding">BRANDING DESIGN</a></li><li><a href="service-details.html?service=web">WEB DEVELOPMENT</a></li><li><a href="service-details.html?service=marketing">DIGITAL MARKETING</a></li><li><a href="service-details.html?service=software">SOFTWARE DEVELOPMENT</a></li><li><a href="service-details.html?service=seo">SEO SERVICES</a></li><li><a href="service-details.html?service=content">CONTENT MARKETING</a></li></ul></li>' +
+            '<li class="menu-item-has-children"><a href="project-3.html">OUR WORKS</a><ul class="sub-menu"><li><a href="project-3.html?filter=branding">GRAPHICS DESIGN &amp; BRANDING</a></li><li><a href="project-3.html?filter=marketing">DIGITAL MARKETING</a></li><li><a href="project-3.html?filter=websites-design">WEBSITE DESIGN &amp; DEVELOPMENT</a></li><li><a href="project-3.html?filter=systems">SOFTWARE &amp; SYSTEMS DEVELOPMENT</a></li></ul></li>' +
+            '<li><a href="blog-2.html">RESOURCES</a></li><li><a href="shop.html">MERCHANDISE</a></li><li><a href="about.html">ABOUT US</a></li><li><a href="about.html#contact-form">WORK WITH US</a></li>' +
+            '</ul></nav>' +
+            '<div class="sidebar-wrap"><h6>Nairobi, Kenya</h6></div>' +
+            '<div class="sidebar-wrap"><h6><a href="tel:+254722465983">+254 722 465 983</a></h6><h6><a href="mailto:hello@stanpixels.co.ke">hello@stanpixels.co.ke</a></h6></div>' +
+            '<div class="social-btn style3"><a href="https://www.tiktok.com/@stanpixelscreatives0?_t=ZM-90dENGcqTXQ&_r=1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a><a href="https://www.instagram.com/stanpixels.0?stkn=MWVuampqYnBsZ2xrdg==" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://x.com/stanpixels?t=x2fNgJXGrEH8dw1uA0dFWQ&s=09" aria-label="X"><i class="fab fa-twitter"></i></a><a href="https://www.behance.net/hikyqunke" aria-label="Behance"><i class="fab fa-behance"></i></a></div>';
+
+        $('.mobile-menu-wrapper').each(function () {
+            $(this).attr('aria-hidden', 'true').find('.mobile-menu-area').html(mobileMenuMarkup);
+        });
+    };
+
     updateSiteContactDetails();
+    standardizeMobileMenu();
     addSlugTitlesToPageLinks();
 
     // Give every footer social icon the same layout and hover effect as TikTok.
