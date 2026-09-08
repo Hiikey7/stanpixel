@@ -16029,6 +16029,10 @@ body.product-options-modal-open {
     border: 0;
     border-radius: 0;
   }
+  .mobile-menu-wrapper .social-btn.style3,
+  .sidemenu-wrapper .social-btn.style2 {
+    gap: 10px;
+  }
 }
 .project-details-page-area .project-detail-title {
   font-size: clamp(26px, 3vw, 40px);
