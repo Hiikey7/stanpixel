@@ -659,6 +659,7 @@
     function updatePricingCarousels() {
         $('.pricing-carousel').each(function () {
             var carousel = $(this);
+            var isHomePricing = carousel.closest('.home-page').length > 0;
             if (pricingMobile.matches && !carousel.hasClass('slick-initialized')) {
                 carousel.slick({
                     slidesToShow: 1,
@@ -666,8 +667,11 @@
                     initialSlide: 1,
                     centerMode: true,
                     centerPadding: '9%',
-                    infinite: false,
-                    autoplay: false,
+                    infinite: isHomePricing,
+                    autoplay: isHomePricing,
+                    autoplaySpeed: 5000,
+                    pauseOnHover: true,
+                    pauseOnFocus: true,
                     arrows: false,
                     dots: false,
                     swipeToSlide: true,
