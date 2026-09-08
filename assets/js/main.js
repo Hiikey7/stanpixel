@@ -109,8 +109,35 @@
         });
     };
 
+    var enhanceProjectDetails = function () {
+        $('.project-details-info').each(function () {
+            var $details = $(this);
+            var $list = $details.find('.list-wrap').first();
+            var $website = $list.find('li').filter(function () {
+                return $(this).find('span').first().text().trim().toLowerCase() === 'website:';
+            }).find('a').first();
+
+            if (!$list.length || $details.find('.project-details-toggle').length) {
+                return;
+            }
+
+            $details.append('<button type="button" class="project-details-toggle" aria-expanded="false">See details <i class="fas fa-plus" aria-hidden="true"></i></button>');
+            if ($website.length) {
+                $details.append($('<a class="project-live-demo btn" target="_blank" rel="noopener noreferrer">View live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>').attr('href', $website.attr('href')));
+            }
+        });
+
+        $(document).on('click', '.project-details-toggle', function () {
+            var $button = $(this);
+            var expanded = $button.attr('aria-expanded') === 'true';
+            $button.attr('aria-expanded', String(!expanded)).html((expanded ? 'See details' : 'Hide details') + ' <i class="fas fa-' + (expanded ? 'plus' : 'minus') + '" aria-hidden="true"></i>');
+            $button.closest('.project-details-info').toggleClass('details-expanded', !expanded);
+        });
+    };
+
     updateSiteContactDetails();
     standardizeMobileMenu();
+    enhanceProjectDetails();
     addSlugTitlesToPageLinks();
 
     // Give every footer social icon the same layout and hover effect as TikTok.

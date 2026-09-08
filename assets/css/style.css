@@ -13761,6 +13761,38 @@ blockquote p {
   text-transform: capitalize;
   margin-bottom: 6px;
 }
+.project-details-toggle,
+.project-live-demo {
+  display: none;
+}
+@media (max-width: 767px) {
+  .project-details-info .list-wrap {
+    display: none;
+  }
+  .project-details-info.details-expanded .list-wrap {
+    display: block;
+    margin-top: 20px;
+  }
+  .project-details-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--title-color);
+    background: transparent;
+    color: var(--title-color);
+    font: 600 14px var(--title-font);
+    padding: 13px 18px;
+    text-transform: uppercase;
+  }
+  .project-live-demo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0 0 12px;
+    padding: 14px 18px;
+    font-size: 13px;
+  }
+}
 
 .inner__page-nav {
   display: flex;
