@@ -16072,12 +16072,38 @@ body.product-options-modal-open {
 .nav-header .main-menu .sub-menu {
   min-width: 330px;
 }
-@media (max-width: 1399px) {
+@media (max-width: 991px) {
   .nav-header .main-menu {
     display: none !important;
   }
   .nav-header .navbar-right {
     display: inline-flex !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header-layout1 .sticky-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header-logo .site-logo {
+    width: 150px;
+  }
+  .nav-header .main-menu > ul {
+    margin: 0 -9px !important;
+  }
+  .nav-header .main-menu > ul > li > a {
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 11px;
+  }
+  .header-button {
+    gap: 14px;
+    margin-left: 18px;
+  }
+  .header-button .btn {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 11px;
   }
 }
 /* Shared brand logo sizing for desktop, mobile, and footer placements. */
