@@ -16018,6 +16018,11 @@ body.product-options-modal-open {
   max-width: 100%;
   height: auto;
 }
+@media (max-width: 575px) {
+  .header-logo .site-logo {
+    width: 140px;
+  }
+}
 .project-details-page-area .project-detail-title {
   font-size: clamp(26px, 3vw, 40px);
   line-height: 1.25;
