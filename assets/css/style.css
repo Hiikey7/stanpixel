@@ -12357,6 +12357,33 @@ blockquote p {
     padding: 20px 12px;
     width: 100%;
   }
+  .pricing-swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 18px 0 0;
+    color: var(--title-color);
+    font: 600 12px var(--title-font);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .pricing-swipe-hint i {
+    animation: pricing-swipe-direction 0.9s ease-in-out 3;
+  }
+  .pricing-swipe-hint i:last-child {
+    animation-direction: reverse;
+  }
+  @keyframes pricing-swipe-direction {
+    50% {
+      transform: translateX(7px);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pricing-swipe-hint i {
+      animation: none;
+    }
+  }
 }
 
 .pricing-card-popular {

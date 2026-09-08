@@ -674,8 +674,12 @@
                     speed: 350,
                     adaptiveHeight: true
                 });
+                if (carousel.closest('.home-page').length && !carousel.next('.pricing-swipe-hint').length) {
+                    carousel.after('<p class="pricing-swipe-hint" aria-hidden="true"><i class="fas fa-arrow-left"></i><span>Swipe to compare packages</span><i class="fas fa-arrow-right"></i></p>');
+                }
             } else if (!pricingMobile.matches && carousel.hasClass('slick-initialized')) {
                 carousel.slick('unslick');
+                carousel.next('.pricing-swipe-hint').remove();
             }
         });
     }
