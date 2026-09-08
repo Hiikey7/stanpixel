@@ -44,6 +44,7 @@
         });
         $('.copyright-text a').attr('href', 'https://www.stanpixels.co.ke/').text('Stanpixels');
         $('.sidemenu-content .footer-logo .site-logo').attr('src', 'assets/img/hero/white main.png');
+        $('a[href="home-4"]').attr('href', '/');
 
         var socialLinks = [
             ['https://www.facebook.com/', 'https://www.tiktok.com/@stanpixelscreatives0?_t=ZM-90dENGcqTXQ&_r=1', 'fab fa-tiktok'],
