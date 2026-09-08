@@ -6024,7 +6024,7 @@ ul.wp-block-latest-posts li:last-child {
   /* Extra small devices */
 }
 .header-layout1 .sticky-wrapper {
-  padding: 0px 36px;
+  padding: 0 clamp(48px, 5vw, 96px);
 }
 @media (min-width: 1922px) {
   .header-layout1 .menu-area {
