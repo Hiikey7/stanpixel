@@ -1,12 +1,11 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/home-4"
-    }
-  ],
   "redirects": [
+    {
+      "source": "/home-4",
+      "destination": "/",
+      "permanent": true
+    },
     {
       "source": "/project-anti-money-laundering",
       "destination": "/project-shop-ict-gadgets",
