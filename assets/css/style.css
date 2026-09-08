@@ -13766,16 +13766,24 @@ blockquote p {
   display: none;
 }
 @media (max-width: 767px) {
+  .project-details-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
   .project-details-info .list-wrap {
     display: none;
   }
   .project-details-info.details-expanded .list-wrap {
     display: block;
+    flex-basis: 100%;
+    order: 3;
     margin-top: 20px;
   }
   .project-details-toggle {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     border: 0;
     background: transparent;
@@ -13783,14 +13791,17 @@ blockquote p {
     font: 600 14px var(--title-font);
     padding: 13px 18px;
     text-transform: uppercase;
+    order: 2;
   }
   .project-live-demo {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     margin: 0 12px 0 0;
     padding: 14px 18px;
     font-size: 13px;
+    order: 1;
   }
 }
 
