@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/project-anti-money-laundering.html",
+      "destination": "/project-shop-ict-gadgets.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-laundering-compliance.html",
+      "destination": "/project-niko.html",
+      "permanent": true
+    }
+  ]
+}
