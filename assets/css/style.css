@@ -16080,55 +16080,33 @@ body.product-options-modal-open {
     display: inline-flex !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) {
   .header-layout1 .sticky-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: clamp(20px, 3vw, 64px);
+    padding-right: clamp(20px, 3vw, 64px);
   }
   .header-layout1 .header-logo .site-logo {
-    width: 150px;
+    width: clamp(145px, 12vw, 180px);
   }
   .nav-header .main-menu > ul {
-    margin: 0 -9px !important;
+    margin: 0 calc(clamp(9px, 1.4vw, 22px) * -1) !important;
   }
   .nav-header .main-menu > ul > li > a {
-    padding-left: 9px;
-    padding-right: 9px;
-    font-size: 11px;
+    padding-left: clamp(9px, 1.4vw, 22px);
+    padding-right: clamp(9px, 1.4vw, 22px);
+    font-size: clamp(11px, 0.9vw, 14px);
   }
   .header-button {
-    gap: 14px;
-    margin-left: 18px;
+    gap: clamp(14px, 2vw, 28px);
+    margin-left: clamp(18px, 2vw, 48px);
   }
   .header-button .btn {
-    padding-left: 16px;
-    padding-right: 16px;
-    font-size: 11px;
+    padding-left: clamp(16px, 1.5vw, 28px);
+    padding-right: clamp(16px, 1.5vw, 28px);
+    font-size: clamp(11px, 0.85vw, 14px);
   }
-}
-@media (min-width: 992px) {
   .header-layout1 .menu-area .row {
     flex-wrap: nowrap;
-  }
-}
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .header-layout1 .sticky-wrapper {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  .header-layout1 .header-logo .site-logo {
-    width: 160px;
-  }
-  .nav-header .main-menu > ul {
-    margin: 0 -13px !important;
-  }
-  .nav-header .main-menu > ul > li > a {
-    padding-left: 13px;
-    padding-right: 13px;
-    font-size: 12px;
-  }
-  .header-button {
-    margin-left: 28px;
   }
 }
 /* Shared brand logo sizing for desktop, mobile, and footer placements. */
