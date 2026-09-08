@@ -122,8 +122,8 @@
             }
 
             $details.append('<button type="button" class="project-details-toggle" aria-expanded="false">See details <i class="fas fa-plus" aria-hidden="true"></i></button>');
-            if ($website.length) {
-                $details.append($('<a class="project-live-demo btn" target="_blank" rel="noopener noreferrer">View live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>').attr('href', $website.attr('href')));
+            if ($website.length && $details.data('live-demo') === true) {
+                $details.prepend($('<a class="project-live-demo btn" target="_blank" rel="noopener noreferrer">View live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>').attr('href', $website.attr('href')));
             }
         });
 
