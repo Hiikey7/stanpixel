@@ -16022,6 +16022,13 @@ body.product-options-modal-open {
   .header-logo .site-logo {
     width: 140px;
   }
+  .header-layout1 .header-logo {
+    margin-left: 16px;
+  }
+  .header-layout1 .navbar-right .sidebar-btn {
+    border: 0;
+    border-radius: 0;
+  }
 }
 .project-details-page-area .project-detail-title {
   font-size: clamp(26px, 3vw, 40px);
