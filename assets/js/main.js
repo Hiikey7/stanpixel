@@ -141,6 +141,42 @@
     enhanceProjectDetails();
     addSlugTitlesToPageLinks();
 
+    var loadSeoArticle = function () {
+        if (new URLSearchParams(window.location.search).get('article') !== 'seo-guide') {
+            return;
+        }
+
+        var title = 'Everything You Need to Know About SEO';
+        document.title = title + ' | Stanpixels';
+        $('meta[name="description"]').attr('content', 'A practical guide to SEO, including on-page, technical, off-page and local SEO for businesses.');
+        $('meta[property="og:title"]').attr('content', document.title);
+        $('.breadcumb-menu li:last-child').text(title);
+        $('.blog__details-thumb img').attr({ src: 'assets/img/blog/seo.png', alt: 'Search engine optimization guide' });
+        $('.blog__details-content').html(
+            '<div class="blog-post-meta"><ul class="list-wrap"><li>September 10, 2026</li><li><a href="blog-2?resource=blogs">SEO</a></li></ul></div>' +
+            '<h2 class="title">' + title + '</h2>' +
+            '<p>Search Engine Optimization (SEO) is one of the most important parts of building a successful online presence. It helps a small business, e-commerce store, personal brand, or company appear when potential customers search for relevant products, services, or information.</p>' +
+            '<p>Unlike paid advertising, SEO improves organic visibility over time. A well-optimized website can attract relevant visitors, generate leads and sales, and build lasting brand awareness.</p>' +
+            '<blockquote><img class="blockquote-icon" src="assets/img/icon/quote.svg" alt=""><p>A beautiful website is only valuable when people can find it. SEO connects your website with people already searching for what you offer.</p></blockquote>' +
+            '<h3>What Is SEO?</h3><p>SEO is the process of improving a website so search engines can understand, crawl, index, and rank its content. It includes keyword research, content optimization, technical SEO, site structure, backlinks, local SEO, image optimization, speed, mobile responsiveness, and user experience.</p>' +
+            '<h3>Why Is SEO Important?</h3><p>SEO makes a business more discoverable when customers are actively searching. Its benefits include increased organic traffic, more qualified leads, stronger visibility, credibility, improved user experience, and long-term online growth.</p>' +
+            '<h3>The Main Types of SEO</h3><h4>On-Page SEO</h4><p>On-page SEO improves the content and elements on your website: page titles, headings, URLs, keywords, meta descriptions, internal links, images, and useful content that matches search intent.</p>' +
+            '<h4>Technical SEO</h4><p>Technical SEO covers the foundations that affect crawling, indexing, performance, and usability: website speed, mobile responsiveness, XML sitemaps, HTTPS, structured data, canonical URLs, crawlability, broken links, and Core Web Vitals.</p>' +
+            '<h4>Off-Page SEO</h4><p>Off-page SEO includes signals outside your site, especially high-quality, relevant backlinks. Quality and relevance matter more than simply collecting a high number of links.</p>' +
+            '<h4>Local SEO</h4><p>Local SEO helps businesses appear for location-based searches. It includes Google Business Profile optimization, accurate business details, reviews, location pages, local content, and citations.</p>' +
+            '<h3>Keyword Research</h3><p>Keyword research identifies the phrases people use to find information, products, and services. The best keywords are not always those with the highest volume: lower-volume phrases with strong commercial intent can be more valuable.</p>' +
+            '<h3>SEO Content</h3><p>SEO-friendly blog posts, service pages, landing pages, product descriptions, and FAQs should answer the searcher’s question, use relevant keywords naturally, have clear structure, and provide a useful next step. Avoid content written only to insert keywords.</p>' +
+            '<h3>SEO for E-commerce and Website Design</h3><p>Online stores benefit from optimized product and category pages, descriptions, images, URLs, internal links, structured data, navigation, and technical performance. SEO should be considered from the start of a web project through clear structure, fast load times, mobile-friendly layouts, descriptive URLs, proper headings, and easy navigation.</p>' +
+            '<h3>Common SEO Mistakes</h3><p>Avoid keyword stuffing, copied content, slow pages, poorly optimized images, duplicate content, weak technical foundations, low-quality backlinks, misleading titles, and neglected internal links. SEO is a long-term process, not an immediate result.</p>' +
+            '<h3>How Long Does SEO Take?</h3><p>There is no guaranteed timeframe. Results depend on competition, content quality, authority, and target terms. Sustainable growth takes ongoing research, optimization, content creation, technical improvements, monitoring, and adjustment.</p>' +
+            '<h3>SEO vs Paid Advertising</h3><p>SEO earns organic visibility through useful content and optimization, while paid advertising buys immediate placement. Many businesses benefit from both: advertising can create quick exposure while SEO builds long-term visibility.</p>' +
+            '<h3>Frequently Asked Questions</h3><h4>Is SEO important for small businesses?</h4><p>Yes. SEO helps small businesses reach relevant customers without relying entirely on paid advertising.</p><h4>Does website design affect SEO?</h4><p>Yes. Structure, speed, responsiveness, navigation, content organization, and user experience all affect how people and search engines interact with a site.</p>' +
+            '<h3>Conclusion</h3><p>SEO is essential to modern digital marketing. From keyword research and content to technical performance and local search, every part helps make a website more visible and useful. Stanpixels combines web design, development, branding, and digital marketing to build strong SEO-ready foundations for businesses.</p>' +
+            '<div class="blog__details-bottom"><div class="post-tags"><ul class="list-wrap"><li><a href="blog-2?resource=blogs">SEO</a></li><li><a href="blog-2?resource=blogs">Digital Marketing</a></li><li><a href="blog-2?resource=blogs">Web Design</a></li></ul></div></div>'
+        );
+    };
+    loadSeoArticle();
+
     // Give every footer social icon the same layout and hover effect as TikTok.
     $('footer .social-btn a').each(function () {
         var $link = $(this);
