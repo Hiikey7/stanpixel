@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="preloader" aria-hidden="true"><div class="preloader-inner"><span></span><span></span><span></span><span></span></div></div>
     <header class="nav-header header-layout1 bg-white">
         <div class="sticky-wrapper"><div class="menu-area"><div class="container-fluid"><div class="row align-items-center justify-content-between">
             <div class="col-auto"><div class="header-logo"><a href="index"><img class="site-logo" src="assets/img/icon/white.png" alt="Stanpixels" width="180" height="31"></a></div></div>
@@ -69,6 +70,6 @@
         <div class="col-md-6 col-xl-auto col-lg-4"><div class="widget footer-widget widget-contact"><h3 class="widget_title">Contact</h3><ul class="contact-info-list"><li><a href="about#contact-form">Start a project with us</a></li><li><a href="mailto:info@stanpixels.com">info@stanpixels.com</a></li></ul></div></div>
     </div></div></div><div class="container"><div class="copyright-wrap"><div class="row gy-3 justify-content-between align-items-center"><div class="col-md-6"><p class="copyright-text">Copyright © 2026 <a href="index">Stanpixels</a></p></div><div class="col-md-6"><div class="text-md-end"><a href="terms-policy">Terms &amp; Conditions</a></div></div></div></div></div></footer>
     <div class="scroll-top"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg></div>
-    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/main.js"></script>
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/main.js"></script><script>document.querySelectorAll('.main-menu .sub-menu').forEach(function(menu){if(menu.querySelector('a[href="project-3?filter=branding"]')&&!menu.querySelector('a[href="project-3?filter=marketing"]')){var item=document.createElement('li');item.innerHTML='<a href="project-3?filter=marketing">DIGITAL MARKETING</a>';menu.querySelector('a[href="project-3?filter=branding"]').closest('li').after(item);}});</script>
 </body>
 </html>
