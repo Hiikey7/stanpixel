@@ -1297,7 +1297,7 @@
         var tool = $card.find('.prompt-tool').first().text().trim();
         var promptLink = $card.find('.blog-post-thumb a, .title a').first().attr('href') || window.location.href;
         var promptUrl = new URL(promptLink, window.location.href).href;
-        var shareText = 'Title: ' + title + '\nTool: ' + tool + '\n\nPrompt:\n' + promptText;
+        var shareText = 'Title: ' + title + '\nTool: ' + tool + '\n\nPrompt:\n' + promptText + '\n\nMore AI prompts are available at Stanpixels.';
         var shareComplete = function () {
             $shareButton.addClass('shared');
             window.setTimeout(function () {
@@ -1311,7 +1311,7 @@
         }
 
         if (navigator.clipboard && window.isSecureContext) {
-            navigator.clipboard.writeText(shareText + '\n\nURL: ' + promptUrl).then(shareComplete);
+            navigator.clipboard.writeText(shareText + '\n\nURL:\n' + promptUrl).then(shareComplete);
         }
     });
     $('.product-color-swatch, .product-size-option').on('click', function () {
