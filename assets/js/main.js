@@ -1506,6 +1506,11 @@
         updateHeaderCount(getCart());
     }());
     (function () {
+        var getCardCategories = function ($card) {
+            return String($card.attr('data-category') || '').split(',').map(function (category) {
+                return category.trim();
+            }).filter(Boolean);
+        };
         var $page = $('.blog-prompts-page');
         var $grid = $page.find('.blog-post-wrap > .row').first();
         var $cards = $grid.find('.col-md-6');
@@ -1527,12 +1532,14 @@
         };
         var resourceCards = $cards.filter(function () {
             var $card = $(this);
-            var category = $card.data('category');
+            var categories = getCardCategories($card);
             if (resourceFilter === 'blogs') {
                 return $card.find('.article-card').length > 0 || $card.hasClass('article-card');
             }
             if (resourceFilter === 'assets') {
-                return ['Mockups', 'Photography', 'Enhancement', 'Photo Editing', 'Design', 'Social Media'].indexOf(category) !== -1;
+                return categories.some(function (category) {
+                    return ['Mockups', 'Photography', 'Enhancement', 'Photo Editing', 'Logo', 'Branding', 'Poster', 'Sports'].indexOf(category) !== -1;
+                });
             }
             if (resourceFilter === 'prompts') {
                 return !$card.find('.article-card').length && !$card.hasClass('article-card');
@@ -1580,7 +1587,9 @@
         var updateCategoryCounts = function () {
             $categoryFilters.each(function () {
                 var category = $(this).data('category');
-                var count = $cards.filter('[data-category="' + category + '"]').length;
+                var count = $cards.filter(function () {
+                    return getCardCategories($(this)).indexOf(category) !== -1;
+                }).length;
                 $(this).find('.category-count').text(count);
             });
         };
@@ -1634,7 +1643,7 @@
                     $card.data('category')
                 ].join(' ').toLowerCase();
                 var matchesQuery = !normalizedQuery || searchableText.indexOf(normalizedQuery) !== -1;
-                var matchesCategory = !category || $card.data('category') === category;
+                var matchesCategory = !category || getCardCategories($card).indexOf(category) !== -1;
                 return matchesQuery && matchesCategory;
             });
             renderPagination(1);
