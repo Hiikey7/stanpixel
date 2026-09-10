@@ -2,6 +2,11 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/prompts",
+      "destination": "/blog-2?resource=prompts",
+      "permanent": true
+    },
+    {
       "source": "/home-4",
       "destination": "/",
       "permanent": true
